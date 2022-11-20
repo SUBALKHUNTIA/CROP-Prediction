@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+</head>
+<body>
+    <h1>Crop Prediction</h1>
+
+	<form action="{{ url_for('predict')}}"method="post">
+		<input type="text" name="f1" placeholder="temperature">
+		<input type="text" name="f2" placeholder="humidity">
+		<input type="text" name="f3" placeholder="pH">
+		<input type="text" name="f4" placeholder="rainfall">
+		<input type="submit" value="Predict">
+  </form>
+  <div class="card text-center" style="width:21.5em;margin:0 auto;">
+    <div class="card-body">
+      <p class="card text">
+      <h1>
+        <font color="black">{{prediction}}</font>
+      </h1>
+      </p>
+
+
+    </div>
+</body>
+</html>
